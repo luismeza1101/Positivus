@@ -14,7 +14,7 @@ const SPRING_OPTIONS = {
 
 const DragCarrousel: React.FC<Props> = ({ array }) => {
   const [itemProduct, setItemProduct] = useState(0);
-  const DRAG_BUFFER = 40;
+  const DRAG_BUFFER = 25;
   const dragX = useMotionValue(0);
 
   const onDragEnd = () => {
