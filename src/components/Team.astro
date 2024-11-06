@@ -1,0 +1,46 @@
+---
+import { all_team } from "../data/team";
+import CardTeam from "./CardTeam";
+---
+
+<section class="section-container flex flex-col">
+  <div class="container-subtitle">
+    <h2 class="subtitle">Team</h2>
+    <p>
+      Meet the skilled and experienced team behind our successful digital
+      marketing strategies
+    </p>
+  </div>
+  <div class="grid grid-rows-4 w-[90%] mx-auto gap-5 desktop:hidden">
+    {
+      all_team
+        .slice(0, 4)
+        .map((member) => (
+          <CardTeam
+            cargo={member.cargo}
+            description={member.description}
+            image={member.image}
+            name={member.name}
+          />
+        ))
+    }
+  </div>
+  <div
+    class="hidden desktop:grid grid-rows-3 grid-cols-2 w-full gap-5 desktopX2:grid-cols-3 desktop:grid-rows-2"
+  >
+    {
+      all_team.map((member) => (
+        <CardTeam
+          cargo={member.cargo}
+          description={member.description}
+          image={member.image}
+          name={member.name}
+        />
+      ))
+    }
+  </div>
+  <button
+    class="bg-secondary w-full text-white rounded-2xl h-[60px] my-10 desktop:w-[270px] desktop:self-end"
+    >See all team</button
+  >
+</section>

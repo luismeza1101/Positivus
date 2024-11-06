@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.subtitle{
+    @apply bg-main text-3xl font-extrabold px-2 rounded-lg desktop:whitespace-nowrap
+}
+
+.container-subtitle{
+    @apply flex flex-col items-center gap-5 text-center desktop:flex-row desktop:w-[70%] my-10
+}
+
+.section-container{
+    @apply p-7 desktopX2:w-[80%] mx-auto
+}

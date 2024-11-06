@@ -1,0 +1,49 @@
+---
+import MarqueItems from "./MarqueItems";
+
+const companies = [
+  "amazon",
+  "dribbble",
+  "hubspot",
+  "netflix",
+  "notion",
+  "zoom",
+];
+---
+
+<main
+  class="grid grid-cols-[auto] gap-4 px-5 my-4 desktop:grid-cols-2 desktop:grid-rows-[2fr_2fr_1fr] desktopX2:w-[80%] mx-auto"
+>
+  <h1 class="text-4xl font-extrabold grid place-content-center lg:text-5xl">
+    Navigatin the digital landscape for succes
+  </h1>
+  <img
+    src="/icons/hero.png"
+    alt="Hero"
+    class="w-full max-w-[600px] mx-auto desktop:row-span-2 desktop:col-start-2 desktop:row-start-1"
+  />
+  <section class="flex flex-col gap-6 desktop:col-start-1 desktop:row-start-2">
+    <p class="font-medium">
+      Our digital marketing agency helps businesses grow and succeed online
+      through a range of services including SEO, PPC, social media marketing,
+      and content creation.
+    </p>
+    <button
+      class="bg-secondary text-white w-full h-[65px] rounded-2xl desktop:w-[250px]"
+      >Book a consultation</button
+    >
+  </section>
+  <section class="overflow-x-hidden desktop:hidden">
+    <MarqueItems from={0} to={"-100%"} companies={companies} client:load />
+    <MarqueItems from={"-100%"} to={0} companies={companies} client:load />
+  </section>
+  <section
+    class="hidden desktop:flex items-center justify-around col-span-2 row-start-3"
+  >
+    {
+      companies.map((compani) => (
+        <img src={`/icons/companies/${compani}.svg`} alt={compani} />
+      ))
+    }
+  </section>
+</main>

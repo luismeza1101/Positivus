@@ -1,0 +1,40 @@
+---
+import CardServices from "./CardServices";
+import { cards_services } from "../data/card_services";
+---
+
+<section class="section-container">
+  <div class="container-subtitle">
+    <h2 class="subtitle">Services</h2>
+    <p>
+      At our digital marketing agency, we offer a range of services to help
+      businesses grow and succeed online. These services include:
+    </p>
+  </div>
+  <div
+    class="grid grid-rows-6 grid-cols-1 place-content-center my-10 gap-5 desktop:grid-cols-2 desktop:grid-rows-3"
+  >
+    {
+      cards_services.map((card) => (
+        <CardServices
+          service={card.service}
+          image={card.image}
+          background={card.background}
+        />
+      ))
+    }
+  </div>
+  <div class="bg-white-modify p-8 rounded-2xl desktop:flex desktop:justify-around">
+    <div class="flex flex-col gap-8 desktop:w-1/2 justify-evenly">
+      <h3 class="text-2xl font-bold">Let's make things happend</h3>
+      <p class="font-semibold text-sm desktop:text-base">
+        Contact us today to learn more about how our digital marketing services
+        can help your business grow and succeed online.
+      </p>
+      <button type="button" class="bg-secondary text-white py-5 rounded-xl w-full desktop:w-[290px]"
+        >Get your free proposal
+      </button>
+    </div>
+    <img src="/icons/service-card.svg" alt="image" class="hidden desktop:block w-[30%]">
+  </div>
+</section>

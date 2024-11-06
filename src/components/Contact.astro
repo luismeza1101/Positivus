@@ -1,0 +1,53 @@
+---
+
+---
+
+<section class="section-container">
+  <div class="container-subtitle">
+    <h2 class="subtitle">Contact Us</h2>
+    <p>Connect with Us: Let's Discuss Your Digital Marketing Needs</p>
+  </div>
+  <div class="desktop:flex bg-white-modify rounded-3xl gap-10 items-center desktopX2:gap-30">
+    <form
+      class="w-[90%] mx-auto p-5 flex flex-col gap-7 desktop:w-[60%]"
+    >
+      <section class="flex justify-around items-center">
+        <div>
+          <input type="radio" name="opcion" value="Say Hi" />
+          <label for="">Say Hi</label>
+        </div>
+        <div>
+          <input type="radio" name="opcion" value="Get a Quote" />
+          <label for="">Get a Quote</label>
+        </div>
+      </section>
+      <div class="flex flex-col">
+        <label for="name" class="font-bold">Name</label>
+        <input
+          type="text"
+          placeholder="Name"
+          id="name"
+          class="border-2 border-black rounded-lg p-3 outline-none"
+        />
+      </div>
+      <div class="flex flex-col">
+        <label for="email" class="font-bold">Email*</label>
+        <input
+          type="email"
+          placeholder="Email"
+          id="email"
+          class="border-2 border-black rounded-lg p-3 outline-none"
+        />
+      </div>
+      <div class="flex flex-col">
+        <label for="message" class="font-bold">Message*</label>
+        <textarea
+          placeholder="Message"
+          id="message"
+          class="border-2 border-black rounded-lg p-3 outline-none"></textarea>
+      </div>
+      <button type="submit" class="bg-secondary text-white h-14 rounded-xl">Send Message</button>
+    </form>
+    <img src="/icons/contact.png" alt="contact" class="hidden desktop:block flex-1 ">
+  </div>
+</section>

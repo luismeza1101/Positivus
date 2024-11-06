@@ -1,0 +1,21 @@
+---
+const workings = ['Consultation', 'Research and Strategy Development', 'Implementation', 'Monitoring and Optimization', 'Reporting and Communication', 'Continual Improvement']
+---
+
+<section class="section-container">
+    <div class="container-subtitle">
+        <h2 class="subtitle">Our Working Process</h2>
+        <p>Step-by-Step Guide to Achieving Your Business Goals</p>
+    </div>
+    <div class="flex flex-col gap-6 w-[90%] mx-auto mt-7">
+        {workings.map((work, index) => (
+            <div class="bg-white-modify border-2 border-black rounded-full flex items-center justify-between px-9 h-[100px] shadow-card-services">
+                <div class="flex gap-3 items-center desktop:gap-6">
+                    <span class="text-3xl font-bold desktop:text-4xl">{`0${index + 1}`}</span>
+                    <span class="font-semibold desktop:text-2xl">{work}</span>
+                </div>
+                <img src="/icons/plus.svg" alt="plus">
+            </div>
+        ))}
+    </div>
+</section>
