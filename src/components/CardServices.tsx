@@ -17,6 +17,7 @@ const CardServices: React.FC<Type_Services> = ({background,image,service}) => {
     src={`/icons/services/${image}.svg`}
     alt={service}
     className="absolute right-4 bottom-9"
+    loading="lazy"
     />
   <img src={`/icons/${background == 'secondary' ? 'arrow-white-black' : 'arrow-black-green'}.svg`} alt="arrow" />
 </div>

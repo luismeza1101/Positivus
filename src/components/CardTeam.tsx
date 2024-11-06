@@ -4,7 +4,7 @@ const CardTeam: React.FC<Type_Team> = ({cargo, description, image, name}) => {
   return (
     <div className="border-2 border-black rounded-2xl p-10 shadow-card-services relative">
         <div className="flex items-end gap-6">
-            <img src={`/icons/team/${image}.svg`} alt={name} />
+            <img src={`/icons/team/${image}.png`} alt={name} loading="lazy"/>
             <div className="flex flex-col">
                 <span className="font-extrabold">{name}</span>
                 <span>{cargo}</span>
